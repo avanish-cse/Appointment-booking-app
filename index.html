@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Call UI</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+
+    <div class="main">
+
+        <!-- Form Container -->
+        <div class="form-container hidden">
+            <h2>New Call</h2>
+            <form id="call-form">
+                <label>Image URL</label>
+                <input required id="image-url" type="url" placeholder="https://example.com/photo.jpg" />
+
+                <label>Full Name</label>
+                <input required id="full-name" type="text" placeholder="Enter full name" />
+
+                <label>Home Town</label>
+                <input required id="home-town" type="text" placeholder="Enter home town" />
+
+                <label>Purpose</label>
+                <input required id="purpose" type="text" placeholder="e.g., Quick appointment note" />
+
+                <label>Category</label>
+                <div class="categories">
+                    <label class="tag emergency">
+                        <input type="radio" name="category" value="emergency" required />
+                        Emergency
+                    </label>
+                    <label class="tag important">
+                        <input type="radio" name="category" value="important" />
+                        Important
+                    </label>
+                    <label class="tag urgent">
+                        <input type="radio" name="category" value="urgent" />
+                        Urgent
+                    </label>
+                    <label class="tag norush">
+                        <input type="radio" name="category" value="norush" />
+                        No Rush
+                    </label>
+                </div>
+
+                <button type="submit" id="submit" class="create">Create Note</button>
+                <button type="button" id="form-close-button" class="close">Close</button>
+            </form>
+        </div>
+
+        <!-- Note Container -->
+        <div class="note-container">
+
+            <!-- Sidebar Icons -->
+            <div class="left-icons column gap-1rem">
+                <button><i class="ri-arrow-up-line fa-solid fa-arrow-up"></i></button>
+                <button id="add-note"><i class="ri-add-line fa-solid fa-plus"></i></button>
+                <button><i class="ri-arrow-down-line fa-solid fa-arrow-down"></i></button>
+            </div>
+
+            <!-- Cards -->
+            <div class="card-container">
+                <div class="card">
+
+                    <!-- Profile Info -->
+                    <div class="profile">
+                        <div class="avatar"></div>
+                        <div class="name">Fatima Uma</div>
+                    </div>
+
+                    <!-- Home Town -->
+                    <div class="info">
+                        <span>Home town</span>
+                        <span>Singapore</span>
+                    </div>
+
+                    <!-- Bookings -->
+                    <div class="info">
+                        <span>Bookings</span>
+                        <span>3 times</span>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="buttons">
+                        <button class="btn call">📞 Call</button>
+                        <button class="btn message">Message</button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Font Awesome CDN -->
+    <script src="https://kit.fontawesome.com/4de068a147.js" crossorigin="anonymous"></script>
+
+    <!-- Script -->
+    <script src="./script.js"></script>
+</body>
+
+</html>
