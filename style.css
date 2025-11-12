@@ -191,6 +191,7 @@ input:focus {
   border-radius: 50%;
   background: url("https://via.placeholder.com/") center/cover no-repeat;
   background-color: #ff5a00;
+  overflow: hidden;
 }
 
 .card .name {
